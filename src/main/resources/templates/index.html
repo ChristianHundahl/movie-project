@@ -21,7 +21,7 @@
         <th>Popularity</th>
         <th>Awards</th>
     </tr>
-    <tr th:each="movie : ${movies}">
+    <tr th:each="movie : ${movies}"> <!--ThymeLeaf 'for each' loop-->
         <td th:text="${movie.year}"></td>
         <td th:text="${movie.length}"></td>
         <td th:text="${movie.title}"></td>

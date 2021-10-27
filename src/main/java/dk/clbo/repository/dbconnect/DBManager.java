@@ -9,17 +9,17 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class DBManager {
-    // fields
+    //Fields
     private static String user;
     private static String password;
     private static String url;
     private static Connection connection = null;
 
-    // metoder
+    //Methods
     public static Connection getConnection(){
-        if (connection != null) {
-            return connection;
-        }
+        if (connection != null)//'if' statement her forhindrer at connection skal etableres hver gang metoden bruges
+            return connection;//Singleton: returner connection hvis allerede oprettet
+        //Hent database url, brugernavn og password fra 'resources'
         try (InputStream input = new FileInputStream("src/main/resources/application.properties")) {
             Properties properties = new Properties();
             properties.load(input);

@@ -18,13 +18,13 @@ public class MovieRepository {
     public List<Movie> getAllMovies(){
         movies = new ArrayList<>();
 
-        PreparedStatement stmt = null;
+        PreparedStatement stmt = null;//PreparedStatement = ligner Arraylist, indeholder blot andre datatyper
         try {
             stmt = conn.prepareStatement("SELECT * FROM movies");
             ResultSet rs = stmt.executeQuery();
 
             while(rs.next()) {
-                Movie movie = new Movie(
+                Movie movie = new Movie(//Tager ResultSet rs og laver hver linje om til et 'movie' objekt
                         rs.getString("year"),
                         rs.getString("length"),
                         rs.getString("title"),
