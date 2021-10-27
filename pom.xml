@@ -8,12 +8,14 @@
         <version>2.5.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>dk</groupId>
     <artifactId>clbo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>MovieProjekt</name>
     <description>MovieProjekt</description>
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>11</java.version>
     </properties>
     <dependencies>
@@ -36,9 +38,11 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <build>
+
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
