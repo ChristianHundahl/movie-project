@@ -15,8 +15,12 @@
     <name>MovieProjekt</name>
     <description>MovieProjekt</description>
     <properties>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
         <java.version>11</java.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
